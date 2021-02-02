@@ -4,7 +4,7 @@
 
 int main()
 {
-	printf("UID: %d\n", (int)getuid());
-	printf("GID: %d\n", (int)getgid());
+	printf("PID: %d\n", (int)getpid());
+	printf("PPID: %d\n", (int)getppid());
 	return 0;
 }
