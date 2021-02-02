@@ -12,11 +12,11 @@ int main()
 	}
 	else if (pid == 0)
 	{
-		printf("Дочерний процесс, pid = %d\n", (int)getpid());
+		printf("Дочерний процесс, pid = %d, ppid = %d\n", (int)getpid(), (int)getppid());
 	}
 	else
 	{
-		printf("Родительский процесс, pid = %d\n", (int)getpid());
+		printf("Родительский процесс, pid = %d, ppid = %d\n", (int)getpid(), (int)getppid());
 	}
 
 	return 0;
