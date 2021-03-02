@@ -21,10 +21,12 @@ int main()
     fcntl(fd[1], F_SETFL, fcntl(fd[1], F_GETFL) | O_NONBLOCK);
 
     // Пытаемся записать в буффер, пока это возможно
+    size = write(fd[1], str, 1);
+
     while (size == 1)
     {
-        size = write(fd[1], str, 1);
         bufferSize++;
+        size = write(fd[1], str, 1);
     }
 
     printf("Size of pipe's buffer is %d bytes\n", bufferSize);
