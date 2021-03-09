@@ -9,7 +9,7 @@ int main()
 {
     int *array;
     int shmid;
-    char path[] = "7-01.c";
+    char path[] = "sharedMemoryReader.c";
     key_t key;
     char *sourceCode;
 

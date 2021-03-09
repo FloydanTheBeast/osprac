@@ -9,7 +9,7 @@
 int main()
 {
     int shmid;
-    char path[] = "7-01.c";
+    char path[] = "sharedMemoryReader.c";
     const int fileSize = 3000;
     int file = open(path, O_RDONLY);
 
