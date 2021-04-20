@@ -42,7 +42,7 @@ int main()
 	char resstring1[18], resstring2[17];
 
 	int semid;
-	char pathname[] = "09-2.c";
+	char pathname[] = "10-1.c";
 
 	key_t key;
 	struct sembuf buf;
