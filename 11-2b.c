@@ -5,8 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define LAST_MESSAGE 255
-
 int main(void)
 {
 	int msqid;
@@ -37,20 +35,14 @@ int main(void)
 
 	for (int i = 0; i < msgnum; i++)
 	{
-		//
-		// In an infinite loop, accept messages of any type in FIFO order
-		// with a maximum length of 81 characters
-		// until a message of type LAST_MESSAGE is received.
-		//
-
 		maxSize = 81;
 
+		// Чтение сообщения
 		if ((size = msgrcv(msqid, (struct msgbuf *)&mybuf, maxSize, msgtype1, 0)) < 0)
 		{
 			printf("Can\'t receive message from queue\n");
 			exit(-1);
 		}
-
 
 		printf("11-2b received a message: %s\n", mybuf.msg);
 
