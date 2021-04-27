@@ -62,7 +62,7 @@ int main(void)
       exit(0);
     }
 
-    printf("message type = %ld, username = %s, password = %s, userType = %d\n", mybuf.mtype, mybuf.data.username, mybuf.data.usertype);
+    printf("message type = %ld, username = %s, password = %s, userType = %d\n", mybuf.mtype, mybuf.data.username, mybuf.data.password mybuf.data.usertype);
   }
 
   return 0;
